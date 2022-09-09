@@ -16,22 +16,27 @@ public class BookingServiceImpl implements BookingService{
 
     @Override
     public List<Booking> getAllBookings() {
-        return bookingDao.findAll();
+        return this.bookingDao.findAll();
     }
 
     @Override
-    public Optional<Booking> getBookingById(String booking_id) {
-        return bookingDao.findById(booking_id);
+    public Booking getBookingById(String booking_id) {
+        return this.bookingDao.findById(booking_id).get();
     }
 
     @Override
     public Booking createNewBooking(Booking booking) {
-        return bookingDao.save(booking);
+        return this.bookingDao.save(booking);
     }
 
     @Override
     public Booking updateBooking(Booking booking) {
-        return bookingDao.save(booking);
+        return this.bookingDao.save(booking);
+    }
+
+    @Override
+    public void deleteBooking(String booking_id) {
+        this.bookingDao.deleteById(booking_id);
     }
 }
 

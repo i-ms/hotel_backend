@@ -29,7 +29,7 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public Customer getCustomer(String customer_id) {
-        return customerDao.getReferenceById(customer_id);
+        return customerDao.findById(customer_id).get();
     }
 
     @Override

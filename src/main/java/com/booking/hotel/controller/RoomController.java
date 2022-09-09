@@ -29,7 +29,7 @@ public class RoomController {
 
     @GetMapping("/api/room/get_all")
     public List<Room> getAllRooms(){
-        return roomService.getAllRooms();
+        return this.roomService.getAllRooms();
     }
 
     @GetMapping("/api/room/get/{room_id}")
@@ -37,7 +37,7 @@ public class RoomController {
        return this.roomService.getRoom(room_id);
     }
 
-    @DeleteMapping("/api/room/{room_id}")
+    @DeleteMapping("/api/room/delete/{room_id}")
     public ResponseEntity<HttpStatus> deleteRoom(@PathVariable String room_id){
         try{
             this.roomService.deleteRoom(room_id);

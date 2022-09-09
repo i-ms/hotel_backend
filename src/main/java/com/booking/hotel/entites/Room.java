@@ -21,9 +21,9 @@ public class Room {
     @Column(name="id")
     private String id;
     @Column(name="room_number")
-    private String number;
+    private String room_number;
     @Column(name="room_type")
-    private String type;
+    private String room_type;
     @Column(name="room_price")
     private float price;
 
