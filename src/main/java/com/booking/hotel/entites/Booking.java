@@ -10,6 +10,9 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
 @Entity
 @Table(name="bookings")
 @Getter
@@ -25,7 +28,7 @@ public class Booking {
     @Column(name="room_id")
     private String room_id;
     @Column(name="check_in")
-    private String check_in;
+    private LocalDate check_in;
     @Column(name="check_out")
-    private String check_out;
+    private LocalDate check_out;
 }
